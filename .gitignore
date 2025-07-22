@@ -1,0 +1,76 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# === Jupyter Notebooks ===
+.ipynb_checkpoints
+
+# === Virtual Environments ===
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+env.bak/
+venv.bak/
+
+# === Machine Learning Files ===
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pt
+*.tflite
+*.pb
+*.onnx
+*.joblib
+*.pkl
+*.npy
+*.npz
+runs/        # For TensorBoard logs from PyTorch Lightning, etc.
+
+# === Computer Vision & Data Files ===
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.webp
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.csv
+*.tsv
+*.json
+*.xml
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+datasets/
+data/
+.cache/
+cache/
+tmp/
+temp/
+
+# === IDEs and Editors ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === OS Files ===
+.DS_Store
+Thumbs.db

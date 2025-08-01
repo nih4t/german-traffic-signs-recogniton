@@ -19,6 +19,11 @@ TEST_CSV = os.path.join(DATASET_PATH, 'Test.csv')
 IMG_SIZE = 32
 NUM_CLASSES = 43
 
+# Load class names from CSV
+LABEL_CSV = os.path.join(DATASET_PATH, 'gtsrb_labels.csv')
+label_df = pd.read_csv(LABEL_CSV)
+class_names = dict(zip(label_df['ClassID'], label_df['SignMeaning']))
+
 def load_data(csv_file, dataset_path):
     df = pd.read_csv(csv_file)
     images = []
@@ -96,19 +101,12 @@ print(f"Test accuracy: {test_accuracy:.4f}")
 model.save('traffic_sign_cnn.h5')
 print("Model saved as traffic_sign_cnn.h5")
 
+
 # Example: Predict on a single test image
 sample_img = X_test[0:1]  # Take the first test image
 prediction = model.predict(sample_img)
 predicted_class = np.argmax(prediction, axis=1)[0]
 print(f"Predicted class for sample image: {predicted_class}")
 
-# Optional: Load class names from Meta.csv or define manually
-# Example manual class names (subset, complete list available in GTSRB documentation)
-class_names = {
-    0: 'Speed limit (20km/h)',
-    1: 'Speed limit (30km/h)',
-    2: 'Speed limit (50km/h)',
-    # Add more from Meta.csv or GTSRB documentation
-}
 if predicted_class in class_names:
     print(f"Predicted sign: {class_names[predicted_class]}")

@@ -129,10 +129,6 @@ Contributions are welcome!
 
 Please follow PEP8 and include tests.
 
-## License
-
-MIT License — see the LICENSE file for details.
-
 ## Acknowledgments
 
 - GTSRB dataset creators: Institute of Neural Information Processing, Ulm University  
